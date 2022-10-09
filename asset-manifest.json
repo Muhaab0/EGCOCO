@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EGCOCO/static/css/main.ac89a358.css",
+    "main.js": "/EGCOCO/static/js/main.7e06a190.js",
+    "static/media/Home.jpg": "/EGCOCO/static/media/Home.49564371840acc9f1894.jpg",
+    "static/media/Logo.jpg": "/EGCOCO/static/media/Logo.e22513974e0ed3b9de54.jpg",
+    "index.html": "/EGCOCO/index.html",
+    "main.ac89a358.css.map": "/EGCOCO/static/css/main.ac89a358.css.map",
+    "main.7e06a190.js.map": "/EGCOCO/static/js/main.7e06a190.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac89a358.css",
+    "static/js/main.7e06a190.js"
+  ]
+}
