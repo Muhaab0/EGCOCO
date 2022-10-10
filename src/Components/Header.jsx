@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import home from '../assets/Home.jpg';
+import home from '../assets/Home1.jpg';
 import Typical from "react-typical";
 export default function Header() {
   return (
@@ -50,12 +50,13 @@ const Section = styled.section`
     position: relative;
     .section {
         .image {
-            margin-left:2px;
-            width:1250px;
-                height:550px;
+                max-width:1300px;
+                height:500px;
+                margin:auto;
             img{
-                margin-right: 25px;
-                width:100%;
+                display:flex;
+                margin:auto;
+                width: 94%;
                 height:100%;
                 border-radius: 0.5rem;
 
@@ -63,8 +64,8 @@ const Section = styled.section`
 
         }
         .text {
-            margin-right:2rem;
-            background: #e71f4494;
+            margin-right:4rem;
+            background: #000000e0;
             position: absolute;
             top: 11rem;
             padding: 1rem;
@@ -75,19 +76,21 @@ const Section = styled.section`
                 font-size:1.5rem;
             }
             p {
-                border-bottom:red 1px solid;
                 font-weight:bold;
-                color:yellow;
+                color:#ffbc00;
+                b{
+                    border-bottom:#000000e0 1px solid;
+                }
             }
             .button {
                 position: absolute;
-                top: 20rem;
+                top: 15rem;
                 right: 50%;
                 transform: translatex(50%);
                 padding: 1rem;
                
                 button {
-                    background: #e71f4494;
+                    background: #000000e0;
                     padding: 0.5rem 2rem;
                     border: none;
                     color: white;
@@ -99,6 +102,17 @@ const Section = styled.section`
                 }
                 }
             }
+            @media (max-width: 999px) {
+                .image {
+                    max-width:800px;
+                }
+                 .section .text {
+                    margin-right: 3rem;
+                    top: 7rem
+                 }
+                 .section  h2 {
+                      font-size: 1rem;
+}               }
             
             
     
