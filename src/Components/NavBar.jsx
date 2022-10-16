@@ -19,9 +19,8 @@ export default function NavBar() {
     
 
   return (
-    <Nav  state={isNavOpen ? 1 : 0} className='flex j-center a-center'>
-        <div className='navbar flex a-center j-between gap'>
-
+    <Nav  state={isNavOpen ? 1 : 0} className='flex j-center  a-center'>
+        <div className='navbar flex a-center'>
     <div className='logo '>
         <img className="logo-img" src={logo} alt="logo" />
     </div>
@@ -73,14 +72,13 @@ const Nav = styled.nav`
   .toggle {
     display: none;
   }
-    left:50%;
-    transform:translatex(-50%);
+  justify-content:space-even;
     direction: rtl;
     color:white;
-    background:black;
+    background:#00000000;
     padding:0.5rem 0rem;
     border-radius:2rem ;
-    width: 94%;
+    width: 100%;
     position:fixed;
     z-index:1111;
     li {
@@ -93,7 +91,11 @@ const Nav = styled.nav`
         opacity: initial;
     }
     }
+    .navbar {
+      gap:15rem;
+    }
 .logo {
+  flex:1;
     cursor:pointer;
     width:3.5rem;
     img {
@@ -162,7 +164,10 @@ const Nav = styled.nav`
     }
     @media (max-width: 769px) {
                 .logo {
-                    width: 3rem;;
+                  width:2.5rem;
+                }
+                .navbar {
+                  gap:4rem;
                 }
             }
 `;

@@ -1,43 +1,36 @@
 import React from 'react'
 import styled from "styled-components";
-import home from '../assets/Home1.jpg';
+import digital from '../assets/digital1.mp4';
 import Typical from "react-typical";
 export default function Header() {
   return (
     <Section>
         <div className='section'>
-        <div className='image'>
-            <img src={home} alt="home" />
+        <div className='video'>
+            <video autoPlay  muted loop>
+            <source src={digital} type="video/mp4"/> 
+             </video>
         </div>
+        
+            <div className='content'>
+            <h2 className='COCO font'>EGCOCO</h2>
             <div className='text'>
+
                 <h2>نحن شركة تسويق اليكتروني</h2>
-                <h2>خدماتنا, </h2>
                     <p>
 
 
                         <Typical
-                        loop={Infinity}
-                        wrapper="b"
+                        loop={1}
+                        wrapper="p"
                         steps={[
-                            " تصميمات و انشاء المواقع",
-                            3000,
-                           "فيديوهات مقاليه متحركه",
-                            3000,
-                            "تهيئة محركات البحث",
-                            3000,
-                            " ادارة صفحات السوشيال ميديا ",
-                            3000,
-                            "تصميم جرافيك",
-                            3000,
-                            " تواصل معنا للمزيد",
-                            3000,
+                            " تواصل معنا للمزيد الان",
                         ]}
                         />
                     </p>
             </div>
-            <div className='button'>
-                        <button>احجز الان</button>
             </div>
+        
         </div>
 
     </Section>
@@ -46,28 +39,48 @@ export default function Header() {
 
 const Section = styled.section`
     color:white;
-    padding-top:5rem;
     position: relative;
     .section {
-        .image {
-                max-width:1300px;
-                height:500px;
+        .video {
+                z-index:-100;
+                filter:grayscale(100%);
                 margin:auto;
-            img{
-                display:flex;
-                margin:auto;
-                width: 94%;
-                height:100%;
-                border-radius: 0.5rem;
-
+                width:100%;
+                video{
+                    width:100%;
             }
 
         }
-        .text {
-            margin-right:4rem;
-            background: #000000e0;
+
+        .content{
+            right:15rem;
             position: absolute;
             top: 11rem;
+            .COCO {
+                position: relative;
+                font-size: 4rem;
+                color: #ffffff;
+                line-height: .9em;
+                font-weight: normal;
+                display: block;
+                bottom: 4rem;
+
+                &:before {
+                content: "";
+                position: absolute;
+                bottom: -1rem;
+                background: #ffbc00;
+                width: 100%;
+                height: 1px;
+                display: flex;
+}
+
+                }
+}
+            }
+        .text {
+            background: #000000e0;
+            
             padding: 1rem;
             max-width: 30rem;
             border-radius: 0.5rem;
@@ -82,6 +95,7 @@ const Section = styled.section`
                     border-bottom:#000000e0 1px solid;
                 }
             }
+        
             .button {
                 position: absolute;
                 top: 15rem;
@@ -101,19 +115,31 @@ const Section = styled.section`
                 }
                 }
                 }
-            }
-            @media (max-width: 999px) {
-                .image {
-                    max-width:800px;
+            
+            @media (max-width: 1200px) {
+                .content {
+                    right: 3rem !important;
+                    top: 10rem !important;
+                    .COCO {
+                        bottom:2rem !important;
+                        font-size:3rem!important;
+                    }
                 }
-                 .section .text {
-                    margin-right: 3rem;
-                    top: 7rem
-                 }
-                 .section  h2 {
-                      font-size: 1rem;
-}               }
             
-            
+                @media (max-width: 697px) {
+                    .content {
+                        right: 1rem !important;
+                        top: 6rem !important;
+                    .COCO {
+                    font-size:2rem  !important;
+                }
+                .text {
+                    h2 {
+                        font-size: 1rem !important;
+                        }
+                    }
+                }
+                    }
+                }
     
 `;
