@@ -46,7 +46,9 @@ const Section = styled.section`
                 filter:grayscale(100%);
                 margin:auto;
                 width:100%;
+                
                 video{
+                    margin-bottom: -7px;
                     width:100%;
             }
 
