@@ -11,14 +11,13 @@ export default function Services() {
 
             <h2>Now A
                 Part Of
-                Brave
-                Bison
+                EgCoCo                
                 </h2>
         </div>
         </div>
         <div className='right-side '>
         <div className='inner'>
-            <h3>What are you interested in?</h3>
+            <h3>What are you interested in</h3>
             <div className='links'>
             <ul>
             
@@ -40,7 +39,7 @@ export default function Services() {
 
                 </li>
                 <li>
-                    <a href="#"><span>Conversion Optimistion & UX</span></a>
+                    <a href="#"><span>Conversion Optimistion</span></a>
 
                 </li>
             </ul>
@@ -81,7 +80,7 @@ export default function Services() {
 const Section = styled.section`
 color:white;
 .col {
-    height: 680px;
+    height: 700px;
 }
 .left-side {
     padding-top: 50px;
@@ -93,7 +92,7 @@ color:white;
     .text {
     h2 {
     font-size: 4rem;
-    width: 45%;
+    width: 110%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -119,11 +118,13 @@ color:white;
     justify-content: space-between;
 }
     h3 {
-        font-size:30px;
+        font-size: 2.5rem;
         margin-bottom: 30px;
     }
     .links {
         display:flex;
+        gap:25px;
+        width:80%;
         ul {
             width: 40%;
             margin-left: 60px;
@@ -147,6 +148,7 @@ color:white;
                 top: 29px;
                 left: 9.8rem;
                 font-size: 3.8rem;
+                font-weight: bold;
                 &:hover {
                     color:white;
                 }
@@ -154,6 +156,9 @@ color:white;
                 }
             span {
                 font-size: 21px;
+                width: 20px;
+                display: flex;
+                flex-direction: column;
                 }
 
             }
@@ -171,16 +176,17 @@ color:white;
     }
     .right-side {
         h3 {
+            font-size: 2.5rem !important;
             margin-right: 70px;
         }
     width:100% !important;
-    padding-top: 25px;
-    padding-bottom: 25px;
     padding-right:unset;
     .inner {
         align-items:normal;
     }
         .links {
+            width: 65%;
+            margin: auto;
             li {
                 padding-right: 60px !important;
                 
@@ -199,13 +205,14 @@ color:white;
     }
     .left-side {
     width:100%!important;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
      .text {
-    width: 50%;
+    width: 65%;
     margin:unset;
     h2 {
-        font-size:3.5rem;
+        margin-right:70px;
+        font-size:3rem;
     }
     }
 }  
@@ -215,6 +222,7 @@ color:white;
 @media (max-width: 679px) {
     .left-side {
     h2 {
+        margin-right:35px !important;
     font-size: 2.5rem !important;
     }
 
@@ -222,7 +230,7 @@ color:white;
         .right-side {
             h3 {
                 margin-right: 35px;
-                font-size: 25px !important;
+                font-size: 2rem !important;
             }
     .links {
 
@@ -231,7 +239,7 @@ color:white;
                 font-size:16px !important ;
             }
             &:before {
-                left: 10rem!important;
+                
                     font-size: 3rem!important;
                             }
     }

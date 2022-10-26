@@ -16,15 +16,15 @@ export default function Header() {
             <h2 className='COCO font'>EGCOCO</h2>
             <div className='text'>
 
-                <h2>نحن شركة تسويق اليكتروني</h2>
+                <h2>مرحبا بك , نحن شركه تسويق اليكتروني</h2>
                     <p>
 
 
                         <Typical
                         loop={1}
                         wrapper="p"
-                        steps={[
-                            " تواصل معنا للمزيد الان",
+                        steps={[,
+                            " تواصل معنا للمزيد  ",
                         ]}
                         />
                     </p>

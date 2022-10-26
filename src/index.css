@@ -5,10 +5,12 @@
  direction: rtl;
 }
  body {
-  color: #222222;
+  color: white;
+  background: #222222;
   overscroll-behavior: none;
   scroll-behavior: auto;
   background-color: #000;
+  font-weight: bold;
 
 }
 
