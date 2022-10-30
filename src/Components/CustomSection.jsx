@@ -19,9 +19,9 @@ export default function CustomSection() {
 
 const Section = styled.section`
  background:#ffbc00;
- height:600px;
+ height:530px;
 .custom {
-    padding-top: 50px;
+    padding-top: 35px;
     padding-bottom: 50px;
     width:50%;   
     height:100%;
@@ -47,7 +47,7 @@ const Section = styled.section`
 }
 
 @media (max-width: 1080px) { 
-    height:500px;
+    height:450px;
     .custom {
     width:100%!important;
      .text {
@@ -59,6 +59,7 @@ const Section = styled.section`
         font-size:3rem;
     }
     .icon {
+        margin-top:25px;
         margin-right:70px;
         font-size:4rem;
     }

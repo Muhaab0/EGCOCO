@@ -1,3 +1,4 @@
+import Blogs from "./Components/Blogs";
 import CustomSection from "./Components/CustomSection";
 import Earnings from "./Components/Earrnings";
 import Header from "./Components/Header";
@@ -12,6 +13,7 @@ function App() {
       <Services />
       <Earnings />
       <CustomSection />
+      <Blogs />
     </div>
   );
 }
