@@ -276,7 +276,7 @@ export default function Earnings() {
 }
 const Section = styled.section`
 .col {
-  margin-top: 100px;
+  border-top: solid 1px #222222;
   flex-direction: column;
 
 .Chartes {
@@ -380,16 +380,15 @@ const Section = styled.section`
 
       .left-sec {
         width:50%;
-        padding-left: 60px;
+        margin-left: 116px;
 .carouselInner {
     padding:5px;
-    height: 80%;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    margin-top: 50px;
     
 }
 
@@ -504,10 +503,11 @@ h1, p {
       }
     
     .left-sec {
-      width: 70%;
-    height: 400px;
-    padding: 0px;
+    width: 90%;
+    height: 460px;
     margin: auto;
+    padding-left: 80px;
+}
       .carouselInner {
         height:100%;
         margin-top: 25px;

@@ -115,7 +115,7 @@ export default function Blogs() {
             </h2>
     </div> 
         </div>
-      <div className="roadmap flex gap">
+      <div className="roadmap flex gap-2">
         {data.map(({ date, name, description, icon }, index) => {
           return (
             <div className="map flex column gap-1 a-start" key={index}>
@@ -139,8 +139,8 @@ export default function Blogs() {
 }
 
 const Section = styled.section`
-background:#222222;
-height:950px;
+background:#393939;
+height:1100px;
 padding-top:50px;
 padding-bottom:50px;
 .container {
@@ -163,11 +163,11 @@ width:50%;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-bottom: 4rem;
-    width: 80%;
+    width: 90%;
     margin: auto;
 
     &::-webkit-scrollbar {
-      height: 4px;
+      height: 2.5px;
       background:black;
     }
     &::-webkit-scrollbar-thumb {
@@ -175,21 +175,21 @@ width:50%;
     }
 
     .map {
-      height: 610px;
-    min-width: 400px;
+      height: 700px;
+    min-width: 380px;
     position: relative;
     min-height: max-content;
-    background: #ffbc00;
+    background: #222222;
     padding: 20px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 3px;
     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
 }
 }
         .content {
           text-align: right;
           position: absolute;
-          top: 225px;
+          top: 280px;
           left: 0;
           padding: 10px;
           height: 100%;
@@ -224,13 +224,14 @@ width:50%;
           }
         
         .description {
-          font-size: 1.4rem;
-          height: 50%;
+          font-size: 1.5rem;
+          line-height:1.4;
+          height: 45%;
           overflow: auto;
           padding-bottom: 10px;
           font-weight: normal;
           &::-webkit-scrollbar {
-            width:4px;
+            width:1.5px;
             background:white;
     }
         &::-webkit-scrollbar-thumb  {
@@ -240,18 +241,18 @@ width:50%;
         }
       .icon {
         background-color: var(--roadmap-icon);
-        width: 400px;
-        height: 220px;
+        width: 380px;
+        height: 270px;
         position: absolute;
         top: 0px;
         left: 50%;
         transform: translatex(-50%);
-        filter: drop-shadow(5px 1px 8px black) contrast(0.5);
+        filter: drop-shadow(5px 1px 8px black) contrast(0.7);
         transition:2s;
         cursor:pointer;
       }
         .icon:hover {
-          filter:drop-shadow(5px 1px 10px white);
+          filter:drop-shadow(5px 1px 5px white);
         }
         
 
@@ -261,16 +262,23 @@ width:50%;
                   }
 
     @media (max-width: 1080px) {
+      .click {
+        padding:8px !important ;
+      }
+
+      .data {
+        font-size:14px;
+      }
       .description {
-          font-size: 1.2rem!important;
+          font-size: 1.4rem!important;
       }
       .roadmap {
-        gap:3rem!important;
+        gap:1.5rem!important;
       }
       .map {
-        min-width:370px!important;
+        min-width:350px!important;
         .icon {
-          width:370px;
+          width:350px;
         }
       }
     .text {
@@ -285,18 +293,34 @@ width:50%;
     
 
     @media (max-width: 679px) {
+      .text {
+      width: 65% !important;
+    margin: unset !important;
+
+    h2 {
+      margin-right: 35px !important;
+      font-size: 2rem !important;
+    }
+}
+
+      .info {
+        gap:5px;
+      .click {
+        padding:5px !important ;
+      }
+      }
+
       .roadmap {
-        gap:2rem!important;
       }
       .map {
-        min-width:350px!important;
-        height: 510px!important;
+        min-width:300px!important;
+        height: 560px!important;
         .icon {
-          width:350px;
+          width:300px;
         }
          .description {
-        font-size: 1.2rem;
-        height: 40%;
+        font-size: 1.3rem !important;
+        height: 45%;
       }
     }
       }

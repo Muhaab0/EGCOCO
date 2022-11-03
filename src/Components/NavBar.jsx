@@ -11,6 +11,11 @@ export default function NavBar() {
     const html = document.querySelector("html");
     html.addEventListener("click", (e) => setIsNavOpen(false));
 
+    const [visible, setVisible] = useState(false);
+    window.addEventListener("scroll", () => window.pageYOffset > 700 ? setVisible(true) : setVisible(false));
+    
+    
+
    const navLinks = [
         "الرئيسيه",
         "عن الشركه",
@@ -20,7 +25,7 @@ export default function NavBar() {
 
   return (
     <Nav  state={isNavOpen ? 1 : 0} className='flex j-center  a-center'>
-        <div className='navbar flex a-center'>
+        <div className={`navbar flex a-center ${visible ? "black" : "none"}`}>
     <div className='logo '>
         <img className="logo-img" src={logo} alt="logo" />
     </div>
@@ -51,12 +56,12 @@ export default function NavBar() {
         </ul>
     </div>
 
-        <div className='info flex gap-1 a-center j-center'>
+        <div className='info flex gap a-center j-center'>
         <div className="account flex gap-1 a-center j-center">
           <span>
             <BsPerson />
+          <span className="text">حسابي</span>
           </span>
-          <span>حسابي</span>
         </div>
         <div className="search">
           <IoSearchOutline />
@@ -76,7 +81,7 @@ const Nav = styled.nav`
     direction: rtl;
     color:white;
     background:#00000000;
-    padding:0.5rem 0rem;
+    padding:0.1rem 0rem;
     border-radius:2rem ;
     width: 100%;
     position:fixed;
@@ -93,6 +98,8 @@ const Nav = styled.nav`
     }
     .navbar {
       gap:15rem;
+      border-radius: 50px;
+      padding: 5px;
     }
 .logo {
   flex:1;
@@ -107,6 +114,12 @@ const Nav = styled.nav`
     .info {
         .account {
             span {
+              .text {
+                position:relative;
+                left: -5px;
+                top: -5px;
+              }
+
             svg {
               cursor:pointer;
                 color:#3c67a9;
@@ -125,7 +138,14 @@ const Nav = styled.nav`
 
 
     @media screen and (min-width: 280px) and (max-width: 1080px) {
-        .toggle {
+      .logo {
+                  width:3rem;
+                }
+
+    
+    @media (max-width: 769px) {
+
+      .toggle {
           cursor:pointer;
       padding-right: 1rem;
       display: block;
@@ -162,9 +182,8 @@ const Nav = styled.nav`
       }
     }
     }
-    @media (max-width: 769px) {
                 .logo {
-                  width:2.5rem;
+                  width:2.8rem;
                 }
                 .navbar {
                   gap:4rem;
