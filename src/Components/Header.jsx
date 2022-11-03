@@ -129,6 +129,9 @@ const Section = styled.section`
                 }
             
                 @media (max-width: 697px) {
+                    .video {
+                        width: 650px !important;
+                    }
                     .content {
                         right: 1rem !important;
                         top: 6rem !important;
@@ -136,6 +139,7 @@ const Section = styled.section`
                     font-size:2rem  !important;
                 }
                 .text {
+                    padding:0.5rem;
                     h2 {
                         font-size: 1rem !important;
                         }

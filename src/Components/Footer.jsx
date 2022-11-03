@@ -126,18 +126,20 @@ font-weight: normal;
         .footer {
             flex-direction: column;
             gap: 50px;
+            .text {
+            p {
+                text-align:center;
+                margin-bottom:5px;
+            }
+            }
+        }
             .center {
                 margin: auto;
             }
             .platform {
                 margin: auto;
             }
-        }
-        .logo {
-            p {
-                text-align:center;
-            }
-        }
+        
     }
     .links-container {
      margin-top:0 !important;   

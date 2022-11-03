@@ -303,8 +303,8 @@ const Section = styled.section`
 }
   }
   .right-sec {
-    width:50%;
-    padding-left:60px;
+    width:60%;
+    padding-left:25px;
   }
   display: flex;
   flex-direction: row;
@@ -379,8 +379,8 @@ const Section = styled.section`
         }
 
       .left-sec {
-        width:50%;
-        margin-left: 116px;
+        width:60%;
+        margin-left: 25px;
 .carouselInner {
     padding:5px;
     height: 100%;
@@ -506,7 +506,6 @@ h1, p {
     width: 90%;
     height: 460px;
     margin: auto;
-    padding-left: 80px;
 }
       .carouselInner {
         height:100%;
@@ -518,7 +517,8 @@ h1, p {
 
 @media (max-width: 679px) {
   .Chartes  {
-    height:600px !important;
+    gap: 20px;
+    height:520px !important;
     flex-direction:column !important;
     .info h1 {
       font-size: 1.5rem !important;
@@ -530,24 +530,27 @@ h1, p {
   }
  .Chartes .left-sec {
   padding-top: 0 !important;
-    padding-bottom: 0 !important;
   width:100% !important;
   height:0 !important;
  }
+  .carousel .left-sec {
+    padding-left:0 !important;
+    width:98% !important;
+  }
   .carousel .right-sec .text  ,
-  .Chartes .left-sec .text {
+  .col .Chartes .left-sec .text {
     width: 65% !important;
     margin:unset !important;
  h2 {
     margin-right: 35px !important;
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
  }
 
 }
 .Chartes {
 
 .right-sec {
-    padding:50px !important;
+    padding:30px !important;
     width: 100%!important ;
   }
 }

@@ -273,6 +273,9 @@ width:50%;
           font-size: 1.4rem!important;
       }
       .roadmap {
+        margin-top: 10px;
+    margin-bottom: 10px;
+
         gap:1.5rem!important;
       }
       .map {
@@ -293,6 +296,7 @@ width:50%;
     
 
     @media (max-width: 679px) {
+      height: 900px;
       .text {
       width: 65% !important;
     margin: unset !important;
@@ -311,6 +315,7 @@ width:50%;
       }
 
       .roadmap {
+        
       }
       .map {
         min-width:300px!important;

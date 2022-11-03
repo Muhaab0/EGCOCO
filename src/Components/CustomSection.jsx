@@ -66,4 +66,21 @@ const Section = styled.section`
     }
 }  
 }
-`
+
+@media (max-width: 669px) { 
+    height:365px;
+    .custom {
+.text {
+    width: 65% !important;
+    margin:unset !important;
+ h2 {
+    margin-right: 35px !important;
+    font-size: 2.5rem !important;
+ }
+ .icon {
+    font-size:3rem;
+ }
+}
+}
+    }
+    `

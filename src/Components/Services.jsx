@@ -221,12 +221,15 @@ color:white;
         
 @media (max-width: 679px) {
     .left-side {
+        padding-top: 100px !important;
+        padding-bottom: 100px !important;
     h2 {
         margin-right:35px !important;
     font-size: 2.5rem !important;
     }
 
         }
+    
         .right-side {
             h3 {
                 margin-right: 35px;
@@ -246,5 +249,6 @@ color:white;
     }
 }
 }
+
 
 `
