@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/EGCOCO/static/css/main.0384ec78.css",
-    "main.js": "/EGCOCO/static/js/main.f707c396.js",
+    "main.css": "/EGCOCO/static/css/main.59664e59.css",
+    "main.js": "/EGCOCO/static/js/main.af9233de.js",
     "static/media/digital1.mp4": "/EGCOCO/static/media/digital1.5dceeb801004995b9fa4.mp4",
     "static/media/img4.jpg": "/EGCOCO/static/media/img4.dbf96c2558494a61af21.jpg",
     "static/media/img5.jpg": "/EGCOCO/static/media/img5.46f766ec0cb87a638360.jpg",
@@ -11,11 +11,11 @@
     "static/media/img1.jpg": "/EGCOCO/static/media/img1.55a0d5f0a8ee54211bbe.jpg",
     "static/media/Logo.jpg": "/EGCOCO/static/media/Logo.e22513974e0ed3b9de54.jpg",
     "index.html": "/EGCOCO/index.html",
-    "main.0384ec78.css.map": "/EGCOCO/static/css/main.0384ec78.css.map",
-    "main.f707c396.js.map": "/EGCOCO/static/js/main.f707c396.js.map"
+    "main.59664e59.css.map": "/EGCOCO/static/css/main.59664e59.css.map",
+    "main.af9233de.js.map": "/EGCOCO/static/js/main.af9233de.js.map"
   },
   "entrypoints": [
-    "static/css/main.0384ec78.css",
-    "static/js/main.f707c396.js"
+    "static/css/main.59664e59.css",
+    "static/js/main.af9233de.js"
   ]
 }
