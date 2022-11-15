@@ -1,75 +1,205 @@
-import React from 'react'
+import React,{ useState , useEffect } from 'react'
 import styled from "styled-components"
+import { MdClose } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { content } from "./Contents/Servcontent";
 
 export default function Services() {
+
+const [IsPopOpen, setIsPopOpen] = useState(false);   
+
+const [isClicked, setIsClicked] = useState(false);   
+const [Current, setCurrent] = useState(0);
+
+
+const [value, setValue] = useState([]); 
+
+
+
+    const handleToggle = () => {
+        setIsClicked(true);
+    };
+
+        useEffect(() => {   
+            if (value) {
+                localStorage.setItem("value", JSON.stringify(value));     
+                if (value) {
+                    setValue(value)
+                }    
+            }
+            }, [value]);   
+
   return (
-    <Section id="services">
+    <Section id="services"  state={isClicked ? 1 : 0} >
     <div className='col flex a-center j-center'>
         <div className='left-side main-padding'>
         <div className='text'>
 
 
-            <h2>Now A
-                Part Of
-                EgCoCo                
+            <h2> احصل علي خدماتك من ايجي كوكو               
                 </h2>
         </div>
         </div>
         <div className='right-side '>
         <div className='inner'>
-            <h3>What are you interested in</h3>
+            <h3>ماذا تبحث عن؟</h3>
             <div className='links'>
-            <ul>
-            
-            <li>
-                    <a href="#"><span>SEO</span></a>
+            <ul className='pop'>
+
+            <li  onClick={()=> { 
+                
+                handleToggle();
+                setCurrent(1);
+                 }}
+                  >
+                    <span>تحسين محركات البحث (ٍSEO)</span>
+                    <div className={`info  ${isClicked && Current === 1 ? "flex" : "none" }`}>
+                        <p  className='serv'  onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                    </div>
+
+                </li>
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(2);
+                 }}
+                  >
+                    <span>تصميمات اللوجو</span>
+                    <div className={`info  ${isClicked && Current === 2 ? "flex" : "none" }`}>
+                        <p  className='serv'  onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}><Link to="/CustomPackage">اطلب عرض سعر</Link></p>
+                    </div>
+
+                </li>
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(3);
+                 }}
+                  >
+
+                    <span> برمجه وتطوير المواقع</span>
+                    <div className={`info  ${isClicked && Current === 3 ? "flex" : "none" }`}>
+                        <p  className='serv'  onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                    
+                    </div>
+
+                </li>
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(4);
+                 }}
+                  >
+
+                    <span>تصميم الدعايه والاعلان</span>
+                    <div className={`info  ${isClicked && Current === 4 ? "flex" : "none" }`}>
+                        <p  className='serv'  onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                        </div>
 
                 </li>
 
-                <li>
-                    <a href="#"><span>PaidSearch&Shopping</span></a>
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(5);
+                 }}
+                  >
+
+                    <span>تصميم الفديوهات الاعلانيه </span>
+                    <div className={`info  ${isClicked && Current === 5 ? "flex" : "none" }`}>
+                        <p  className='serv' 
+                         onClick={() => {
+                          setIsPopOpen(true);
+                          setCurrent(0);
+                          setIsClicked(false);
+                         }}
+                         >عن الخدمه</p>
+                      <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                        </div>
+
 
                 </li>
-                <li>
-                    <a href="#"><span>Creative Data & Audience Insights</span></a>
+
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(6);
+                
+                 }}
+                  >
+                    <span> تصميم متاجر اليكترونيه </span>
+                    <div className={`info  ${isClicked && Current === 6 ? "flex" : "none" }`}>
+                        <p  className='serv'  onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                        </div>
 
                 </li>
-                <li>
-                    <a href="#"><span>Design&Build</span></a>
-
-                </li>
-                <li>
-                    <a href="#"><span>Conversion Optimistion</span></a>
+                <li  onClick={()=> { 
+                handleToggle();
+                setCurrent(7);
+                 }}
+                  >
+                    <span> تصميم خطه التسويق </span>
+                    <div className={`info  ${isClicked && Current === 7 ? "flex" : "none" }`}>
+                        <p className='serv' onClick={() => setIsPopOpen(true)}>عن الخدمه</p>
+                        <p className='add' onClick={(e) => {setValue(Current)}}> <Link to="/CustomPackage">اطلب عرض سعر</Link> </p>
+                        </div>
 
                 </li>
             </ul>
-            <ul>
-                <li>
-                    <a href="#"><span>Commerce Systems Insightstegration</span></a>
-
-                </li>
-                <li>
-                    <a href="#"><span>Content Marketing</span></a>
-
-                </li>
-                <li>
-                    <a href="#"><span>Display</span></a>
-
-                </li>
-                <li>
-                    <a href="#"><span>Affiliates</span></a>
-
-                </li>
-                
-                <li>
-                    <a href="#"><span>Analytics</span></a>
-
-                </li>
-                </ul>
         </div>
             </div>
-        </div>
+        </div>        
             </div>
+
+                 <div className={`popup ${IsPopOpen ? "block" : "none" }`}>
+
+                 {
+                    content.map((c ,i ) => {
+                        if (c.id === Current) {
+                            return(
+                                <div className='popo' key={c.id}>
+                                <div className='icon'>
+                                <MdClose onClick={() => setIsPopOpen(false)} />
+                                </div>
+
+                                <div className='liner '>
+                                    <div className='title'>{c.title}</div>                                    <div className='page'>{c.title1}</div>
+                                </div>
+
+                                    <div className='subtitle'>
+                                    {c.subtitle}
+                                    </div> 
+                                <div className='text flex'>
+
+                                    
+
+                                    <div className='content'>
+                                    <p>
+                                        {c.content}
+                                    </p>
+                                    </div>
+                                    <div className='prov'>
+                                    <p>
+                                    {c.prov}
+                                    </p>
+                                    </div>
+                                </div>
+                                    <div className='buttons'>
+                                        <button onClick={() => setIsPopOpen(false)}>اغلاق</button>
+                                        <button onClick={(e) =>
+                                         {setValue(Current)
+                                         setIsPopOpen(false)
+                                         }}><Link to="/CustomPackage">اطلب عرض سعر</Link></button>
+                                    </div>
+
+                                </div>
+                            )
+                        }
+                    } )
+                 }
+                    
+                 </div>
+
 
     </Section>
   )
@@ -77,9 +207,12 @@ export default function Services() {
 
 
 
+
 const Section = styled.section`
 color:white;
+
 .col {
+    
     height: 700px;
 }
 .left-side {
@@ -91,14 +224,14 @@ color:white;
 
     .text {
     h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 110%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     }
-    width:30%;
+    width:20%;
     margin:auto;
 }
 }
@@ -126,47 +259,207 @@ color:white;
         gap:25px;
         width:80%;
         ul {
-            width: 40%;
+            width: 100%;
             margin-left: 60px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            column-gap: 80px;
+    }
         li {
-            width: 200px;
+            cursor:pointer;
+            width: 50%;
             position:relative;
             counter-increment: num;
             padding-right:50px;
             padding-top: 50px;
+                font-weight: bold;
             a {
                 width: 60px;
              color:white;
             list-style:none;
             text-decoration:none;
-            &:before {
+            }
+            &::before {
                 content: "0" counter(num);
                 position:absolute;
                 color: #333333;
                 font-size: 3rem;
                 content: "0" counter(num);
                 top: 29px;
-                left: 9.8rem;
+                margin-right:-4.5rem;
                 font-size: 3.8rem;
-                font-weight: bold;
-                &:hover {
-                    color:white;
-                }
+                cursor:pointer;
+                
                     }
-                }
+                
             span {
-                font-size: 21px;
+                font-size: 23px;
                 width: 20px;
                 display: flex;
                 flex-direction: column;
+            }
+            .info {
+                position:absolute;
+                z-index:50;
+                left:50%;
+                transform:translatex(-50%);
+                align-items:center;
+                justify-content:space-between;
+                flex-direction:row;
+                width: 200px;
+                    text-align: center;
+                    gap:3px;
+                p {
+                    font-size:15px;
+                    font-weight:bold;
+                    background:#ffbc00;
+                    transition:0.5s;
+                    &:hover {
+                    background:#ff8900;
+                    }
                 }
+                .serv {
+                    width:50%;
+                    border-left:solid black 1px;
+                }
+                .add {
+                    width:50%;
 
+                }
             }
-            }
-            
+            }    
+}
+li:hover::before {
+    color:#ffbc00 !important;
+} 
+}
+
+.popup {
+    position:relative;  
+    background: #ffbc00;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index:55566;
+    max-width:100%;
+    .popo {
+
+    }
+    .icon {
+    cursor:pointer;
+        width:25px;
+        height:25px;
+        border-radius:50%;
+        border:solid 1px white;
+        svg {
+        font-size:20px;
+        display:flex;
+        align-item:center;
+        justify-content:center;
+        width: 100%;
+        }
+    }
+    .liner {
+        margin-top:10px;
+        border-bottom: solid white 1px;
+        padding-bottom: 10px;
         
-}
-}
+    }
+        margin-top: 10px;
+        margin-right: 20px;
+        .title {
+        font-weight:bold;
+        margin-right: 10px;
+        background:#222222;
+        padding: 5px 15px;
+        display: inline-block;
+        border-radius:8px;
+        }
+        .subtitle {
+           width: 100%;
+            padding: 15px;
+            font-size: 21px;
+            border: 0.5px solid #222;
+            height: 106px;
+        }
+        }
+        .text {
+            margin-top: 10px;
+            margin-right: 20px;
+            align-item:center;
+            justify-content:space-between;
+            gap: 15px;
+            padding: 0 15px;
+            font-size: 20px;
+            .content {
+                overflow:auto;
+                width:60%;
+                font-weight: normal;
+                p {
+                    overflow: scroll;
+                    max-height: 240px;
+                    &::-webkit-scrollbar {
+                    width:5px;
+                    background:transparent;
+                    }
+                    &::-webkit-scrollbar-thumb  {
+                    background:black;
+                    
+
+                    }
+                }
+            }
+            .prov {
+                overflow:auto;
+                width:40%;
+                font-weight: normal;
+                p {
+                    overflow: scroll;
+                    max-height:240px;
+                    &::-webkit-scrollbar {
+                    width:5px;
+                    background:transparent;
+                    }
+                    &::-webkit-scrollbar-thumb  {
+                    background:black;
+                    
+                    }
+                }
+            }
+
+        }
+        .buttons {
+            display:flex;
+            gap:10px;
+            position:absolute;
+            bottom: 20px;
+             left: 10px;
+             button {
+                cursor:pointer;
+                background:#222222;
+                padding: 5px 15px;
+                color:white;
+                border-radius:8px;
+                border:none;
+                font-weight:bold;
+                font-size:16px;
+                a {
+                    text-decoration:none;
+                color:white;
+                }
+             }
+        }
+
+    }
+    
+
+
 
 @media (max-width: 1080px) {
     .col {
@@ -190,17 +483,16 @@ color:white;
             li {
                 padding-right: 60px !important;
                 
+                &:before {
+                    top: 29px !important;
+                    
+                            }
             }
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-                a {
-                &:before {
-                    top: 29px !important;
-                    left: 10rem!important;
-                    font-size: 3.8rem!important;
-                            }
-                }
+                 
+                
                 }
     }
     .left-side {
@@ -212,10 +504,13 @@ color:white;
     margin:unset;
     h2 {
         margin-right:70px;
-        font-size:3rem;
+        font-size:2.5rem;
     }
     }
 }  
+        .popup {
+            
+        }
 }
 
         
@@ -225,7 +520,7 @@ color:white;
         padding-bottom: 100px !important;
     h2 {
         margin-right:35px !important;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     }
 
         }
@@ -239,16 +534,36 @@ color:white;
 
     a {
         span {            
-                font-size:16px !important ;
+                font-size:18px !important ;
             }
+    }
+            li {
+                span {
+                    font-size:20px!important;
+                }
             &:before {
                 
-                    font-size: 3rem!important;
+                    font-size: 3.3rem!important;
+            }
                             }
     }
     }
+    .info {
+        width:160px!important;
+        p {
+            font-size:12px!important;
+        }
+    }
+    .popup {
+        .text {
+            margin-right:0;
+        }
+     .subtitle {
+        font-size:18px;
+    }
+    }
 }
-}
+
 
 
 `

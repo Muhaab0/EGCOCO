@@ -53,36 +53,36 @@ export default function Blogs() {
       date: "July 2022",
       name: "Muhaab",
       description:
-        "Content Here!",
-      icon: "Pic Here!",
+        "لسه ي حماده",
+      icon: "لسه ي حماده",
     },
     {
       date: "July 2022",
       name: "Muhaab",
       description:
-        "Content Here",
-      icon: "Picture Here" ,
+        "لسه ي حماده",
+      icon: "لسه ي حماده" ,
     },
     {
       date: "July 2022",
       name: "Muhaab",
       description:
-        "Content Here!",
-      icon: "Pic Here!",
+        "لسه ي حماده",
+      icon: "لسه ي حماده",
     },
     {
       date: "July 2022",
       name: "Muhaab",
       description:
-        "Content Here!",
-      icon: "Pic Here!",
+        "لسه ي حماده",
+      icon: "لسه ي حماده",
     },
     {
       date: "July 2022",
       name: "Muhaab",
       description:
-        "Content Here!",
-      icon: "Pic Here!",
+        "لسه ي حماده",
+      icon: "لسه ي حماده",
     },
     {
       date: "July 2022",
@@ -111,7 +111,7 @@ export default function Blogs() {
     <div className="container">
 
         <div className='text'>
-        <h2> EgCOCO Blogs                
+        <h2>  مقالات ايجي كوكو                
             </h2>
     </div> 
         </div>
@@ -147,7 +147,7 @@ padding-bottom:50px;
 width:50%;
 .text {
     h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 110%;
     margin: auto;
     display: flex;
@@ -289,7 +289,7 @@ width:50%;
     margin:unset !important;
     h2 {
         margin-right:70px !important;
-        font-size:3rem !important;
+        font-size:2.5rem !important;
     }
     }
     }
@@ -325,7 +325,7 @@ width:50%;
         }
          .description {
         font-size: 1.3rem !important;
-        height: 45%;
+        height: 35%;
       }
     }
       }

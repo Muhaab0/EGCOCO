@@ -54,7 +54,7 @@ export default function Footer() {
 const Foter = styled.footer`
 background:#222222;
 font-weight: normal;
-        height: 350px;
+        height: 300px;
     padding-top: 50px;
     padding-bottom: 50px;
     border-top: solid 1px #ffbc00;

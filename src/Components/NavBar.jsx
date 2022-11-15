@@ -5,6 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { BsPerson } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
+import {NavLink} from "react-router-dom"
 
 export default function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -12,14 +13,25 @@ export default function NavBar() {
     html.addEventListener("click", (e) => setIsNavOpen(false));
 
     const [visible, setVisible] = useState(false);
-    window.addEventListener("scroll", () => window.pageYOffset > 700 ? setVisible(true) : setVisible(false));
+    window.addEventListener("scroll", () => window.pageYOffset > 200 ? setVisible(true) : setVisible(false));
     
     
 
    const navLinks = [
-        "الرئيسيه",
-        "عن الشركه",
-        "تواصل معنا"
+    {
+      direct: "الرئيسيه" ,
+      component: "/" ,
+    } ,
+
+    {
+      direct: "عن الشركه",
+      component:"/Aboutus"
+    } ,
+    
+    {
+      direct: "تواصل معنا",
+      component:"/Contactus"
+    }
     ]
     
 
@@ -46,10 +58,11 @@ export default function NavBar() {
     <div className={`links ${isNavOpen ? "show" : ""}`}>
         <ul className='flex gap-2'>
     {
-        navLinks.map((link) => {
+        navLinks.map((link , i) => {
             return(
-                <li key={link} flex>
-             {link} 
+                <li key={link.i} >
+             <NavLink to={link.component}>{link.direct}</NavLink>
+
              </li>
         )})
     }
@@ -90,11 +103,23 @@ const Nav = styled.nav`
         cursor:pointer;
         padding:1rem ;
         font-size: 1rem ;
-        opacity: 0.7;
+      a {
+        text-decoration:none;
         transition: 0.5s ease-in-out;
+        color:white;
+        opacity: 0.7;
+        font-weight:normal;
+        padding: 3px;
+        border-radius: 10px;
         &:hover {
         opacity: initial;
+        }
+        &.active {
+        font-weight:bold;
+          opacity: initial;
+          background:#ffbc00;
     }
+      }
     }
     .navbar {
       gap:15rem;

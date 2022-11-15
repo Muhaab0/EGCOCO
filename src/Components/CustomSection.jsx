@@ -1,25 +1,32 @@
 import React from 'react'
 import styled from "styled-components"
 import { VscArrowLeft } from "react-icons/vsc";
+import {Link} from "react-router-dom"
+import CustomPackage from "./Contents/CustomPackage";
 
 export default function CustomSection() {
   return (
 <Section>
 <div className='custom main-padding'>
         <div className='text'>
-            <h2>Choose Your Custom Package</h2>
+            <h2>اختار عرض السعر بنفسك</h2>
+
         <div className='icon'>
-            <VscArrowLeft />
+
+        <Link to="/CustomPackage"><VscArrowLeft /></Link> 
+
         </div>
         </div>
         </div>
+
+
         </Section>
   )
 }
 
 const Section = styled.section`
  background:#ffbc00;
- height:530px;
+ height:450px;
 .custom {
     padding-top: 35px;
     padding-bottom: 50px;
@@ -28,7 +35,7 @@ const Section = styled.section`
 
     .text {
     h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 110%;
     display: flex;
     align-items: center;
@@ -39,15 +46,19 @@ const Section = styled.section`
 }
 .icon {
     margin-top: 50px;
-    font-size: 6rem;
+    font-size: 5rem;
     margin-right: 60px;
     cursor:pointer;
     font-weight:normal;
+    a {
+
+    color:white;
+    }
 }
 }
 
 @media (max-width: 1080px) { 
-    height:450px;
+    height:400px;
     .custom {
     width:100%!important;
      .text {
@@ -56,7 +67,7 @@ const Section = styled.section`
     padding-top: 50px;
     padding-bottom: 25px;
         margin-right:70px;
-        font-size:3rem;
+        font-size:2.5rem;
     }
     .icon {
         margin-top:25px;
@@ -68,14 +79,14 @@ const Section = styled.section`
 }
 
 @media (max-width: 669px) { 
-    height:365px;
+    height:300px;
     .custom {
 .text {
     width: 65% !important;
     margin:unset !important;
  h2 {
     margin-right: 35px !important;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
  }
  .icon {
     font-size:3rem;

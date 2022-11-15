@@ -170,68 +170,12 @@ export default function Earnings() {
     <Section>
       <div className="col flex">
 
-      <div className="carousel  flex main-padding ">
-      
-      <div className="right-sec">
-      <div className='text'>
-          <h2>Watch Our Gallery
-              </h2>
-          </div>
-      </div>
-
-
-      <div className="left-sec">
-      <div
-        className="carouselInner"
-        style={{ backgroundImage: `url(${images[currImg].img})` }}
-      >
-
-
-
-        <div
-          className="right"
-          onClick={() => {
-            currImg > 0 && setCurrImg(currImg - 1);
-          }}
-        >
-          <ArrowForwardIosIcon style={{ fontSize: 30 }} />
-        </div>
-
-        
-         <div className="center">
-         <div className="spans">
-          <span className={currImg == 0 ? "active" : "none"} ></span>
-          <span className={currImg == 1 ? "active" : "none"}  ></span>
-          <span className={currImg == 2 ? "active" : "none"}  ></span>
-          <span className={currImg == 3 ? "active" : "none"}  ></span>
-          <span className={currImg == 4 ? "active" : "none"}  ></span>
-          <span className={currImg == 5 ? "active" : "none"}  ></span>
-         </div>
-        </div> 
-
-
-        <div
-          className="left"
-          onClick={() => {
-            currImg < images.length - 1 && setCurrImg(currImg + 1);
-            
-          }}
-        >
-          <ArrowBackIosIcon style={{ fontSize: 30 }} />
-        </div>
-
-
-      </div>
- 
-      </div>
-      </div>
-
       <div className="Chartes flex main-padding">
 
       <div className="left-sec">
         <div>
         <div className='text'>
-          <h2>This month earnings
+          <h2>ارباح الشهر
 
           </h2>
         </div>
@@ -276,7 +220,7 @@ export default function Earnings() {
 }
 const Section = styled.section`
 .col {
-  border-top: solid 1px #222222;
+  border-top: solid 1px #ffbc00;
   flex-direction: column;
 
 .Chartes {
@@ -291,7 +235,7 @@ const Section = styled.section`
     height:100%;
     .text {
     h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 110%;
     margin: auto;
     display: flex;
@@ -478,7 +422,7 @@ h1, p {
   
  .carousel .right-sec .text h2 ,
 .Chartes .left-sec .text h2 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
 }
     .right-sec {
     .info h1 {
@@ -543,7 +487,7 @@ h1, p {
     margin:unset !important;
  h2 {
     margin-right: 35px !important;
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
  }
 
 }
