@@ -202,7 +202,7 @@ const Section = styled.section`
 }
 
 @media (max-width: 679px) { 
-  height:1100px;
+  height:1200px;
   .info {
     padding:20px;
     p {

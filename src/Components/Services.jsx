@@ -386,7 +386,7 @@ li:hover::before {
             padding: 15px;
             font-size: 21px;
             border: 0.5px solid #222;
-            height: 106px;
+            height: 120px;
         }
         }
         .text {
@@ -549,9 +549,9 @@ li:hover::before {
     }
     }
     .info {
-        width:160px!important;
+        width:170px!important;
         p {
-            font-size:12px!important;
+            font-size:11px!important;
         }
     }
     .popup {

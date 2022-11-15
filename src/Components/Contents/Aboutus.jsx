@@ -148,7 +148,7 @@ function Aboutus() {
     const Section = styled.section`
 
 background:#222222;
-  height:1400px;
+  height:1100px;
   padding-top:150px;
   .info {
     background:#ffbc00;
@@ -324,7 +324,6 @@ h1, p {
             }
 
             @media (max-width: 679px) { 
-                height:2000px;
                 .info {
                     padding:20px;
                     p {

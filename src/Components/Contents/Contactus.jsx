@@ -127,13 +127,14 @@ form {
     margin:auto;
         input {
             padding:1px!important;
+            font-size: 18px!important;
         }
 
         input[type="text"] {
-            width:70%!important;
+            width:90%!important;
         } 
         input[type="email"] ,  input[type="num"] { 
-            width:32%!important;
+            width:40%!important;
         }
 
     }
